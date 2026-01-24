@@ -1,7 +1,7 @@
 
 from sklearn.linear_model import LogisticRegression
 from model.base import BaseModel
-from model.metrices import  compute_metrics
+from model.model_metrices import  compute_metrics
 
 
 class LogisticModel(BaseModel):

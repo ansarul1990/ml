@@ -1,7 +1,7 @@
 from sklearn.neighbors import KNeighborsClassifier
 
 from model.base import BaseModel
-from model.metrices import  compute_metrics
+from model.model_metrices import  compute_metrics
 
 
 class KNNModel(BaseModel):

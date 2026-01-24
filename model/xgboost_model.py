@@ -2,7 +2,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from xgboost import XGBClassifier
 
 from model.base import BaseModel
-from model.metrices import  compute_metrics
+from model.model_metrices import  compute_metrics
 
 
 class XGBoostModel(BaseModel):

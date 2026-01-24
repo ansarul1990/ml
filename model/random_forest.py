@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 
 from model.base import BaseModel
-from model.metrices import  compute_metrics
+from model.model_metrices import  compute_metrics
 
 
 class RandomForestModel(BaseModel):
