@@ -63,7 +63,7 @@ if uploaded_file:
 
     with col2:
         st.subheader("Confusion Matrx")
-        cm = confusion_matrix((y_test, y_pred))
+        cm = confusion_matrix(y_test, y_pred)
         fig, ax = plt.subplots()
         sns.heatmap(cm, annot=True, fmt="d", ax=ax)
         ax.set_xlabel("Predicted")

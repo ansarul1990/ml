@@ -15,6 +15,6 @@ class NaiveBayesModel(BaseModel):
 
     def evaluate(self, x_test, y_test):
         y_pred = self.predict(x_test)
-        y_prob = self.predict(x_test)
+        y_prob = self.predict_proba(x_test)
         return compute_metrics(y_test, y_pred, y_prob)
 
