@@ -2,15 +2,12 @@ from curses import wrapper
 
 import pandas as pd
 import streamlit as st
-from pandas.core.common import random_state
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
-from streamlit import metric
 import  matplotlib.pyplot as plt
 import seaborn as sns
 from model.preprocess import split_features_target, scale_height_weight
 from model.registry.registry import MODEL_REGISTRY
-from model.train_models import X_train, X_test, y_train, y_test
 
 st.set_page_config(page_title="ML Assignmet 2 - Obesity", layout="wide")
 st.title("Obesity Level Classification - ML Assignment 2")
