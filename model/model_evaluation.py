@@ -10,7 +10,7 @@ from sklearn.metrics import (
 
 
 
-def compute_metrics(y_true, y_pred, y_prob) -> Dict[str, float]:
+def evaluate(y_true, y_pred, y_prob) -> Dict[str, float]:
     return {
         "Accuracy": accuracy_score(y_true, y_pred),
         "AUC": roc_auc_score(y_true, y_prob, multi_class="ovr"),

@@ -2,7 +2,7 @@
 from sklearn.tree import DecisionTreeClassifier
 
 from model.base import BaseModel
-from model.model_metrices import  compute_metrics
+from model.model_evaluation import  evaluate
 
 
 class DecisionTreeModel(BaseModel):
@@ -17,5 +17,5 @@ class DecisionTreeModel(BaseModel):
     def evaluate(self, x_test, y_test):
         y_pred = self.predict(x_test)
         y_prob = self.predict_proba(x_test)
-        return compute_metrics(y_test, y_pred, y_prob)
+        return evaluate(y_test, y_pred, y_prob)
 
