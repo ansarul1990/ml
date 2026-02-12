@@ -21,8 +21,8 @@ uploaded_file = st.file_uploader("Upload CSV file", type=["csv"])
 model_selected = st.selectbox("Select Model", list(MODEL_REGISTRY.keys()))
 
 
-test_size = st.slider("Test size", min_value=0.1, max_value=0.4, value=0.2, step=0.05)
-random_state = st.number_input("Random State", min_value=0, max_value=9999, value=42, step=1)
+test_size = 0.2
+random_state = 42
 
 
 if uploaded_file:
