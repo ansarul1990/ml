@@ -1,5 +1,6 @@
 from curses import wrapper
 
+import os
 import pandas as pd
 import streamlit as st
 from sklearn.metrics import classification_report, confusion_matrix
@@ -13,8 +14,19 @@ st.set_page_config(page_title="ML Assignmet 2 - Obesity", layout="wide")
 st.title("Obesity Level Classification - ML Assignment 2")
 
 st.markdown("""
-Upload the obesity dataset CSV (or test subset). Select a model to train and evaluate.
+Upload the obesity dataset CSV (or test subset). Select a model to train and evaluate. Download from below
 """)
+
+SAMPLE_FILE_PATH = os.path.join("sample", "estimation_of_obesity_levels_based_on_eating_habits_and_physical_condition.csv")
+
+if os.path.exists(SAMPLE_FILE_PATH):
+    sample_df = pd.read_csv(SAMPLE_FILE_PATH)
+    st.download_button(
+        label="Download Sample Test Data(csv)",
+        data=sample_df.to_csv(index=False).encode("utf-8"),
+        file_name="estimation_of_obesity_levels_based_on_eating_habits_and_physical_condition.csv",
+        mime="text/csv"
+    )
 
 
 uploaded_file = st.file_uploader("Upload CSV file", type=["csv"])
