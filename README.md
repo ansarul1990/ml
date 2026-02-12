@@ -2,6 +2,7 @@
 **Course:** Machine Learning  
 **Program:** M.Tech (AIML / DSE)  
 **Student Name:** Ansarul Islam Laskar  
+**BITS ID:** 2025AA05568
 
 ---
 
@@ -66,16 +67,15 @@ Each model was evaluated using:
 
 # 📈 Model Comparison Table
 
-| ML Model Name | Accuracy | AUC | Precision | Recall | F1 Score | MCC |
-|---------------|----------|------|-----------|--------|----------|------|
-| Logistic Regression | XX | XX | XX | XX | XX | XX |
-| Decision Tree | XX | XX | XX | XX | XX | XX |
-| kNN | XX | XX | XX | XX | XX | XX |
-| Naive Bayes | XX | XX | XX | XX | XX | XX |
-| Random Forest (Ensemble) | XX | XX | XX | XX | XX | XX |
-| XGBoost (Ensemble) | XX | XX | XX | XX | XX | XX |
+| ML Model Name | Accuracy | AUC    | Precision | Recall | F1 Score | MCC    |
+|----------|----------|--------|-----------|--------|----------|--------|
+| Logistic Regression | 0.8684   | 0.9832 | 0.8697    | 0.8684 | 0.8661   | 0.8473 |
+| Decision Tree | 0.9187   | 0.9515 | 0.9223    | 0.9187 | 0.9194   | 0.9054 |
+| kNN | 0.8349   | 0.9713 | 0.8326    | 0.8349 | 0.828    | 0.8092 |
+| Naive Bayes | 0.6196   | 0.9089 | 0.6387    | 0.6196 | 0.599    | 0.5672 |
+| Random Forest | 0.9545   | 0.9947 | 0.9566    | 0.9545 | 0.955    | 0.9471 |
+| XGBoost  | 0.9593   | 0.9963 | 0.9607    | 0.9593 | 0.9596   | 0.9526 |
 
-> Replace "XX" with your actual evaluation results.
 
 ---
 
@@ -83,12 +83,13 @@ Each model was evaluated using:
 
 | ML Model Name | Observation |
 |---------------|------------|
-| Logistic Regression | Performs well for linearly separable data but may struggle with complex patterns. |
-| Decision Tree | Easy to interpret but prone to overfitting if not tuned properly. |
-| kNN | Sensitive to scaling and value of K. Performs well on structured data. |
-| Naive Bayes | Fast and efficient but assumes feature independence. |
-| Random Forest | Reduces overfitting and improves performance through ensemble learning. |
-| XGBoost | Typically provides strong performance due to boosting and better generalization. |
+| Logistic Regression | Performed reasonably well with 86.84% accuracy and strong AUC (0.9832). This indicates that the dataset has partial linear separability and logistic regression can capture general trends effectively. |
+| Decision Tree | Achieved good performance (91.87% accuracy). While it performs better than traditional linear models, it is slightly less effective than ensemble methods due to possible overfitting or lack of boosting. |
+| kNN | Showed moderate performance (83.49% accuracy). The model is sensitive to feature scaling and the choice of K value, which may impact overall performance. |
+| Naive Bayes | Recorded the lowest performance (61.96% accuracy). The strong feature independence assumption of Naive Bayes likely does not hold for this dataset, resulting in weaker predictive ability. |
+| Random Forest (Ensemble) | Delivered strong performance (95.45% accuracy, 0.9947 AUC). The ensemble approach reduces overfitting and improves generalization compared to a single decision tree. |
+| XGBoost (Ensemble) | Achieved the best overall performance (95.93% accuracy, 0.9963 AUC, highest MCC of 0.9526). The boosting technique effectively captured complex patterns in the dataset and provided superior predictive power. |
+
 
 ---
 
@@ -151,10 +152,14 @@ The application is deployed using:
 
 ---
 
+---
+
 # 🎯 Conclusion
 
-This project successfully demonstrates the implementation and comparison of six classification models on a multi-class dataset.  
+This project successfully implemented and compared six classification algorithms on a multi-class dataset.
 
-Ensemble models such as Random Forest and XGBoost generally provide better performance due to their ability to reduce variance and capture complex patterns.
+The results clearly demonstrate that ensemble methods outperform individual models. XGBoost achieved the highest overall performance across all evaluation metrics, followed closely by Random Forest.
 
-The deployed Streamlit application provides an interactive platform to test and compare models in real time.
+Traditional models such as Logistic Regression and Decision Tree performed reasonably well, while Naive Bayes showed comparatively weaker performance due to its independence assumption.
+
+Overall, ensemble learning techniques demonstrated superior generalization ability, robustness, and predictive accuracy for this dataset.
